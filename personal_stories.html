@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PCOS Awareness</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="pcos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="images/logop.png" alt="PCOS Awareness logo" />
+      </a>
+      <a href="index.html">Home</a>
+      <a href="whats_pcos.html">What is PCOS?</a>
+      <a href="personal_stories.html" class="active">Personal Stories</a>
+      <a href="treatment.html">Treatment & Management</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <section class="intro-section">
+      <h1>Personal Stories</h1>
+        <p>Real voices, real experiences. Hear and read stories from women and teens living with PCOS.</p>
+      <section class="testimonial-slider">
+      <div class="slides">
+        <!-- Slide 1: Video Story -->
+        <div class="slide">
+          <div class="testimonial-content">
+            <h2>Tahanni Ahmed's story</h2>
+            <video controls>
+              <source src="video/tahanni.mp4" type="video/mp4" />
+              Sorry, your browser doesn’t support video.
+            </video>
+            <br><strong><q>Eat healthy leave the chunk and sugar completly, please do not compromise your health, I know its hard it might get worst but keep your head's up no matter what and trust me you are not alone</q></strong>
+          </div>
+        </div>
+
+          <!-- Slide 2: Written Testimonial / Story -->
+        <div class="slide">
+          <div class="testimonial-content">
+              <h2>Nusrat Noha's story</h2>
+              <p>
+                <strong>1. When were you diagnosed?</strong><br>
+                I was officially diagnosed with PCOS when I was 19, but I had symptoms throughout my teenage years. My period was never regular, and I noticed that my friends would have one or two cycles before I even had one. That’s when I first realized something wasn’t right, even though I didn’t fully understand what it meant back then.
+              </p>
+              <p>
+                <strong>2. What did your doctor explain?</strong><br>
+                When I was around 14, I brought up my irregular cycles to my regular doctor, but it was dismissed as “normal for my age.” Later, a gynecologist ran an ultrasound and blood work and explained that my hormones were imbalanced, which can cause irregular periods. When I was 19, another gynecologist officially diagnosed me with PCOS and explained that things like my irregular periods, facial hair, and uneven skin tone were all connected to the condition. She also told me that carbs and sugar can make symptoms flare up because of insulin spikes that are common with PCOS. She emphasized how staying active and maintaining a healthy weight can really help keep symptoms more balanced.
+              </p>
+              <p>
+                <strong>3. Symptoms?</strong><br>
+                I’ve experienced irregular periods, changes in hair growth, and uneven skin tone. These symptoms didn’t stop my daily life, but they definitely made me insecure at times and pushed me to look for real answers about what was going on with my body.
+              </p>
+              <p>
+                <strong>4. How do you manage it?</strong><br>
+                I’ve been trying to manage my symptoms by staying active and making small changes to my routine. I try to work out regularly, whether it’s at the gym or at home. I’ve also added a few supplements that are commonly recommended for PCOS, like inositol, vitamin D, NAC, and magnesium glycinate. Along with being more mindful about sugar and carbs, these steps have helped me feel a lot more balanced overall.
+              </p>
+              <p>
+                <strong>5. Advice for others?</strong><br>
+                PCOS can feel scary and isolating at first, but it’s so much more common than people realize, and you are not alone. Managing symptoms isn’t always easy, and staying consistent can be a challenge, but every small step you take really does make a difference. What matters is that you keep trying and get back to your routine whenever you can.<br><strong style="color: darkgreen;"><q> Be patient with yourself, trust your body, and don’t be afraid to advocate for your health. You’re stronger than you think, and with time you can learn what works best for you.</q></strong> 
+              </p>
+              <img src="images/med.jpeg" alt="supplements" height="400" width="330">
+              <img src="images/med2.jpg" alt="supplements" height="400" width="330">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BUTTONS -->
+        <button class="slider-btn prev">&larr;</button>
+        <button class="slider-btn next">&rarr;</button>
+      </section>
+      </section>
+    </main>
+
+
+    <script>
+    const slides = document.querySelector('.slides');
+    const btnNext = document.querySelector('.next');
+    const btnPrev = document.querySelector('.prev');
+    let currentIndex = 0;
+
+    btnNext.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % 2; // for 2 slides
+      slides.style.transform = `translateX(-${currentIndex * 50}%)`;
+    });
+
+    btnPrev.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + 2) % 2;
+      slides.style.transform = `translateX(-${currentIndex * 50}%)`;
+    });
+    </script>
+
+    <footer>
+      <p>&copy; 2025 PCOS Awareness | All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>
